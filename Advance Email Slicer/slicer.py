@@ -12,7 +12,7 @@ flag = 0
 temp = []
 
 print("--------------------------------------")
-print("Welcome to Advance Email Slicer System")
+print("Welcome t Advance Email Slicer System")
 print("---------------------------------------")
 
 user_name = input('Username:')
