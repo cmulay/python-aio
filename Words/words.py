@@ -1,0 +1,1 @@
+words = ['terminal', 'super', 'sudo']
