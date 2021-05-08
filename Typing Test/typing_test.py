@@ -30,5 +30,6 @@ print('Time used \t :', round(timeTaken, 2), 'seconds')
 print('Your accuracy \t :', round(accuracy, 3) * 100, '%')
 print('Speed is \t :', round(wpm, 2), 'words per minute')
 
-print('-Developed by: Chinmay Mulay')
+print('-Developed by: Chinmay Mulay'
+      '-Enhanced by @kaar07')
 
