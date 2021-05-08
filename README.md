@@ -6,8 +6,7 @@
 ![Stars GitHub](https://img.shields.io/github/stars/cmulay/python-projects?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/cmulay/python-projects?style=for-the-badge)
 
-
-A brief description of what this project does and who it's for
+This repository contains basic to advance and cool to awesome python programs and projects. Feel free to contribute and do star! 
 
 ### Getting Started
  
