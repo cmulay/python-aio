@@ -2,8 +2,7 @@ import requests
 
 
 def kelvinToC(temperature):
-    return round(float(temperature - 273.15),2)
-
+    return round(float(temperature - 273.15), 2)
 
 
 # Enter your API key here
@@ -21,12 +20,12 @@ response = requests.get(complete_url)
 x = response.json()
 
 
-if(x["cod"]==401):
+if(x["cod"] == 401):
     print("Invalid API keys, please check if your API key and ensure that it is activated.")
     print("In case you don't have an API key, sign up at https://openweathermap.org and check for API keys in accounts section.")
-elif(x["cod"]==429):
+elif(x["cod"] == 429):
     print("You exceeded the 60/min established limit of API calls. For more info https://openweathermap.org/faq#error401")
-elif( x["cod"] == "404"):
+elif(x["cod"] == "404"):
     print("Invalid API call. Check the city name. Check at http://bulk.openweathermap.org/sample/")
 else:
     y = x["main"]
@@ -43,4 +42,3 @@ else:
     Humidity (in percentage):\t\t\t{current_humidiy}
     Description : {weather_description.capitalize()}
     """)
-
