@@ -1,20 +1,24 @@
 # Imports
 import time
+import gensentence
 
 # Setting the test phrase and calculating total number of words
-test_phrase = "The woods are lovely, dark and deep, But I have promises to keep, And miles to go before I sleep, And miles to go before I sleep."
+test_phrase = gensentence.generate_sentence()
 total_count = len(test_phrase.split())
 
-t0 = time.time()
 # Setting the Window
 print('-------------\n'+'This is Typing Test! Enter the words at your pace we will calculate your accuracy and wpm and much more !\n'+'-------------\n')
-print('Test Phrase:\n'+test_phrase, '\n')
+neglect = input("Press ENTER to start\n----------------")
+
+t0 = time.time()  # Timer starts only when ENTER has been pressed.
+print('Test Phrase:\n\n\t'+test_phrase, '\n')
 print('-------------\n')
-print('Start Typing:\n')
 # Getting User Entered String
-get_text = str(input())
+get_text = str(input("Start Typing:\n\n\t"))
+print("")
+t1 = time.time()  # Timer ends
+
 # Calculating Results
-t1 = time.time()
 input_total_count = len(get_text.split())
 accuracy = len(set(get_text.split()) & set(test_phrase.split()))
 accuracy = (accuracy / total_count)
@@ -27,3 +31,4 @@ print('Your accuracy \t :', round(accuracy, 3) * 100, '%')
 print('Speed is \t :', round(wpm, 2), 'words per minute')
 
 print('-Developed by: Chinmay Mulay')
+
