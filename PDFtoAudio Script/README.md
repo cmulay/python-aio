@@ -21,7 +21,7 @@ pip install PyPDF2
 
 Import installed libraries
 ```python
-import pyttsx3 # Python Text to Speech Version 3
+import pyttsx3 # Python to Speech Version 3
 import PyPDF2 # Python PDF Reader/Writer 2
 ```
 Copy & Paste your desired PDF in project folder.
