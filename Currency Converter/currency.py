@@ -5,7 +5,7 @@ from tkinter import ttk
 
 
 class CurrencyConverter:
-    def __init__(self, url):
+    def __init__(self, _url):
         self.data = requests.get(url).json()
         self.currencies = self.data['rates']
 
@@ -18,10 +18,10 @@ class CurrencyConverter:
 
 
 class AppInterface(tk.Tk):
-    def __init__(self, converter):
+    def __init__(self, _converter):
         tk.Tk.__init__(self)
         self.title = 'Simple Currency Converter'
-        self.currency_converter = converter
+        self.currency_converter = _converter
         self.geometry('500x200')
         self.configure(background='light grey')
 
@@ -34,7 +34,7 @@ class AppInterface(tk.Tk):
         self.label_welcome.place(x=10, y=5)
         self.label_date.place(x=160, y=50)
 
-        valid = (self.register(self.restrictNumberOnly), '%d', '%P')
+        valid = (self.register(self.restrict_number_only), '%d', '%P')
         self.amount_field = Entry(self, bd=3, relief=tk.RIDGE, justify=tk.CENTER, validate='key', validatecommand=valid)
         self.converted_amount_field_label = Label(self, text='', fg='black', bg='white', relief=tk.RIDGE,
                                                   justify=tk.CENTER, width=17, borderwidth=3)
@@ -74,7 +74,7 @@ class AppInterface(tk.Tk):
 
         self.converted_amount_field_label.config(text=str(converted_amount))
 
-    def restrictNumberOnly(self, action, string):
+    def restrict_number_only(self, action, string):
         regex = re.compile(r"[0-9,]*?(\.)?[0-9,]*$")
         result = regex.match(string)
         return string == "" or (string.count('.') <= 1 and result is not None)
