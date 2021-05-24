@@ -1,3 +1,4 @@
 Development
 *__pycache__
-venv
+.idea
+/venv/
